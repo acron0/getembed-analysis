@@ -83,7 +83,7 @@ information fields don't seem relevant to the property to which they are connect
 #### Profiles
 
 Selected from the tab navigation on the page, this section presents a large table. The
-columns are vaguely named 'planned', 'pre' and 'post' and don't offer much information.
+columns are vaguely named 'planned', 'pre' ad 'post' and don't offer much information.
 The table rows are grouped by headings that are clearly marked. A lot of the cells are
 empty. The table is quite long and in order to reach the bottom scrolling is required. The
 row groups are not sorted alphabetically.
@@ -91,4 +91,36 @@ row groups are not sorted alphabetically.
 #### Devices
 
 This section presents another table. It's unclear to a layman what a 'device' is, but by
-looking at the table it seems to represent a collection of devices
+analysing the table it seems to represent a collection of devices. The information in this
+section is cryptic. The 'Unique Description' and 'Device ID' fields appear to contain
+UIDs. The former field posses the ability to sort the table, although this is irrelevant
+as the UIDs appear random. 
+
+It is not obvious that clicking on a row reveals more information - the subtle visual
+highlight is not enough. Upon clicking a row, the page scrolls to the base of the table
+where a new section has appeared which gives further information about the device
+and its sensors. In some instances, both the table and device details have blank
+fields.
+
+#### Datasets
+
+This section is completely empty.
+
+#### Sensor Charts
+
+This section displays a table of sensors. Like the Devices section, the rows are 
+selectable although this is not immediately obvious. The Type column is sortable,
+although 'type' seems like a miscategorisation as they are infact human-readable
+names/IDs. Below the table is a 'Chart Data' button, two text input boxes 
+containing date ('dd/mm/yyyy') placeholders but there is no obvious relationship between
+the inputs. There are links below the buttons which adjust the date once input. Clicking 
+the input reveals similar functionality inside the widget, as well as a date picker.
+
+Unlike the preceeding sections, clicking a row does not immediately display new data.
+Clicking a row does automatically input date information into the date text boxes. This
+information reflects the 'Event' dates in the row of the specified sensor. Clicking the
+'Chart Data' button displays a line chart of sensor data between the two dates.
+
+It's not obvious, but you can select multiple rows before pressing 'Chart Data' to see the
+respective line charts overlayed. An obscure error message is displayed (often out of
+sight) if you attempt to pick rows that would span more than two unit types.
