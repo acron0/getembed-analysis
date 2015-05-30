@@ -163,35 +163,156 @@ address the issues with this page.
   would be enough to start making the inside pages more appealing.  
 
   4. On the menu bar, replace the user's email address with a 'Profile'
-  drop-down (via text or an icon), which would contain functions such as 'Edit Profile', 'Logout' etc. Remove
-  'Logout' from the menu bar. This approach is far more conventional and familiar to
-  users.
+  drop-down (via text or an icon), which would contain functions such as 'Edit Profile', 
+  'Logout' etc. Remove 'Logout' from the menu bar. This approach is far more conventional
+  and familiar to users.
+
+  5. The navigation tabs (Overview, Profiles etc) should use the appropriate 'Hand' cursor
+  so that they are not confusing.
+
+  6. Ideally, either the navigation tabs should be sticky (at the top, beneath the main
+  menu) or there should be a sticky icon which returns you to the property section (rather
+  than the top of the page) so that you can return to the navigation tabs quickly.
 
 ### Overview
 
+  1. Although we assume the photo is not a critical piece of information (unlike a site
+  like RightMove or Zoopla, where it definitely would be) it makes a good visual anchor
+  for balance on the right side of the page. It should be larger, more prominent and the
+  key pieces of property information should wrap it. Also, using a UI that is similar to
+  that of a well-known property site will likely feel familiar to users, making them more
+  at ease whilst trying to navigate.
 
+  2. All of the information fields in Overview should appear above the fold. There are
+  couple of reasons:  
 
-========
+     a. An 'overview' should be just that; concise, brief, succinct. Extraneous
+     information such as the wordy project descriptions should be hidden by widgets,
+     confined to breakouts or removed entirely.  
 
-NOTES
+     b. When a user first encounters the Overview section, they have not yet used the
+     property tab navigation. If they are forced or encouraged to scroll it out of view,
+     they may find it confusing or difficult to then move to other sections.
 
-- Technology icons need a key, inline or popout, and ALT text.
-- Overview wants to be above the fold.
-- Projects and Programmes need to move away - page should be dedicated to property.
-  - URL formation is odd. Is that on purpose?
-  - Breadcrumbs.
-- The overview wants the biggest make-over [INSERT BALSAMIQ]
-- Don't leave fields blank - use 'Unavailable'
-- Blurb - is it relevant
-- Navigation tab uses incorrect cursor type
-- Profiles table needs a nav or collapsable row groups. Sorting.
-- Clickable things definitely need an appropriate cursor (Devices)
-- Toggle-able things need better visualisation (Sensors)
-  - When tinkering with sensors:
-    - remove the need to press chart data button, have it fetch result async as i toggle the sensors
-  - make more of the date boxes
-    - the error "Please limit the number of different units to 2." was confusing..in fact, i would rethink this UI [INSERT UI IDEA]
-  - date editor - lose the external '+1' links as this facility is built into the widget
-- Picture is not primary focus but can still work as a visual anchor
-- Long ID strings, I would partially obscure because they take up a lot of room. Perhaps only show the first few digits but they expand
-  or tooltip when clicked/hovered.
+  3. Avoid blank information fields. Either omit the field or use an '*Unavailable*'
+  placeholder. Blank fields are confusing.
+
+  4. The Technology icons need a key. This could be inline but breakouts are also popular,
+  with links like "What do these icons mean?". At the very least, the icons should have
+  ALT text.
+
+  5. The Documents section should replace the listed documents filename with either an
+  appropriate description (i.e. Project Final Report) or an icon which informs of the
+  filetype. Simultaneously, the 'Public' label needs clarification such as becoming "This
+  document is public" or "This document is confidential" etc.
+
+  6. Opening a document in the Documents section should open in a new tab or breakout 
+  rather than replacing the current window location.
+
+### Profiles
+
+  1. Each of the headed 'row groups' should be collapsible and be collapsed by default.
+  There should be instructions so that it's clear the headers can be interacted with.
+  There is an overwhelming amount of information in this table and it can afford to be
+  hidden so that users can select just the information they need.
+
+  2. The table should be alphabetically sortable by row group names. Currently there is no
+  sorting on this table and no obvious to the order of the row groups, making it difficult
+  to quickly navigate to any particular group.
+
+  3. More appropriate column headers should be used in conjunction with an explanation as 
+  to what they mean. The current column headers are too vague.
+
+  4. If the purpose of the table is to compare ('diff') the changes between one column to
+  another then coloured row values could be used to indicate a change. For example,
+  columns with the same value use the same colour but columns with a differing value use a
+  different colour.
+
+### Devices
+
+  1. The ability to select rows needs to be made more obvious: 
+
+     a. The grey highlight is too subtle.
+     b. The cursor should change to 'Hand' when hovering.
+
+  2. The "Unique Description" and "Device ID" columns seem like niche information points.
+  Either hide these values using ellipsis (click/hover to reveal) or remove them entirely.
+
+  3. The units in the 'Device Details' pane (and any units on other sections) should be 
+  fully expanded and not just shorthand, i.e. use "Amps" not "A", "Watts per hour" not
+  "Wh".
+
+  4. "Header Rows" and "Calculated Field" columns are blank on every row, so remove them.
+
+  5. Allow the user to sort the table on the "Sensor Types" and "No. of Sensors" columns.
+
+### Sensor Charts
+
+  1. Similarly to in the Devices section, the ability to toggle a row needs to be made
+  more obvious: 
+
+     a. Provide an explanation at the top of the section which mentions toggling rows,
+     displaying the graph and the constraints that are in place.
+     b. The grey highlight is too subtle.
+     c. The cursor should change to 'Hand' when hovering.
+
+  2. The "Description" and "Device ID" columns seem like niche information points. Either 
+  hide these values using ellipsis (click/hover to reveal) or remove them entirely.
+
+  3. "Location" and "Status" columns are blank on every row, so remove them.
+
+  4. Under most circumstances, do not require the user to press "Chart Data" in order to
+  fetch the data and generate the chart. It should be performed automatically and 
+  asynchronously as soon as an additional row is selected. A 'Refresh' button (or icon)
+  could be used for if a user adjusts the date fields.
+
+  5. There needs to be more focus on the date inputs and their relationship. They are 
+  currently unlabled.
+
+  6. The "+1" links below the date inputs duplicate functionality that exists inside the
+  date input widgets themselves and should be removed.
+
+  ```
+  NOTE: This control does not appear to work in all browsers. Consider replacing it with
+  one that does.
+  ```
+  ![Date input browser comparisson](https://raw.githubusercontent.com/acron0/getembed-analysis/master/resources/date-input.png)
+  
+  7. Rather than display an error message when you try to select multiple rows that
+  collectively span more than two units, proactively disallow the user from selecting bad
+  rows by 'disabling' them; no more cursor change, grey highlight. This, together with a
+  decent explanation at the top of the page, *prevents* bad behaviour entirely rather than
+  punishes it.
+
+  8. Allow the user to sort the table on the "Types", "Unit" and two "Event" columns.
+
+  9. Sit the sensor table and graph side by side, rather than stacked. This allows the
+  user better overall control as they don't have to continuously scroll to select
+  different rows to compare.
+
+### Raw Sensor Data
+
+  1. The "Description" and "Device ID" columns seem like niche information points. Either 
+  hide these values using ellipsis (click/hover to reveal) or remove them entirely.
+
+  2. "Location" and "Status" columns are blank on every row, so remove them.
+
+  3. Sensors without any value in the Event columns cannot fetch data and therefore should
+  not be included in the table. 
+
+  4. See comments on 'Devices' and 'Sensor Charts' sections regarding the ability to select
+  rows in a table as they apply here too.
+
+  5. Under most circumstances, do not require the user to press "Get Data" in order to
+  fetch the data. It should be performed automatically and asynchronously as soon as an a
+  row is selected. A 'Refresh' button (or icon) could be used for if a user adjusts the
+  date field.
+
+  6. See comments in 'Sensor Charts' section regarding date input widget and external 
+  controls.
+
+  7. Sit the sensor table and data table side by side, rather than stacked, and provide a
+  scrollable area for the data table so that a large number of results doesn't severly
+  affect the height of the page.
+
+## Examples
