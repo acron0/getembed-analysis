@@ -168,3 +168,30 @@ address the issues with this page.
   users.
 
 ### Overview
+
+
+
+========
+
+NOTES
+
+- Technology icons need a key, inline or popout, and ALT text.
+- Overview wants to be above the fold.
+- Projects and Programmes need to move away - page should be dedicated to property.
+  - URL formation is odd. Is that on purpose?
+  - Breadcrumbs.
+- The overview wants the biggest make-over [INSERT BALSAMIQ]
+- Don't leave fields blank - use 'Unavailable'
+- Blurb - is it relevant
+- Navigation tab uses incorrect cursor type
+- Profiles table needs a nav or collapsable row groups. Sorting.
+- Clickable things definitely need an appropriate cursor (Devices)
+- Toggle-able things need better visualisation (Sensors)
+  - When tinkering with sensors:
+    - remove the need to press chart data button, have it fetch result async as i toggle the sensors
+  - make more of the date boxes
+    - the error "Please limit the number of different units to 2." was confusing..in fact, i would rethink this UI [INSERT UI IDEA]
+  - date editor - lose the external '+1' links as this facility is built into the widget
+- Picture is not primary focus but can still work as a visual anchor
+- Long ID strings, I would partially obscure because they take up a lot of room. Perhaps only show the first few digits but they expand
+  or tooltip when clicked/hovered.
