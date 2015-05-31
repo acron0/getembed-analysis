@@ -239,7 +239,8 @@ address the issues with this page.
      b. The cursor should change to 'Hand' when hovering.
 
   2. The "Unique Description" and "Device ID" columns seem like niche information points.
-  Either hide these values using ellipsis (click/hover to reveal) or remove them entirely.
+  Either hide these values using ellipsis (click/hover to reveal), move them to the
+  details section or remove them entirely.
 
   3. The units in the 'Device Details' pane (and any units on other sections) should be 
   fully expanded and not just shorthand, i.e. use "Amps" not "A", "Watts per hour" not
@@ -248,6 +249,10 @@ address the issues with this page.
   4. "Header Rows" and "Calculated Field" columns are blank on every row, so remove them.
 
   5. Allow the user to sort the table on the "Sensor Types" and "No. of Sensors" columns.
+
+  6. Sit the device table and details section side by side, rather than stacked. This
+  allows the user better overall control as they don't have to continuously scroll to
+  view the selected device.
 
 ### Sensor Charts
 
@@ -319,3 +324,33 @@ address the issues with this page.
   affect the height of the page.
 
 ## Examples
+
+Some concept examples which illustrate the key points made above.
+
+### Overview
+
+![Overview Example](https://raw.githubusercontent.com/acron0/getembed-analysis/master/resources/mockup-overview.png)
+
+### Profiles
+
+![Profiles Example](https://raw.githubusercontent.com/acron0/getembed-analysis/master/resources/mockup-profiles.png)
+
+### Devices
+
+![Devices Example](https://raw.githubusercontent.com/acron0/getembed-analysis/master/resources/mockup-devices.png)
+
+### Sensor Charts
+
+![Sensor Charts Example](https://raw.githubusercontent.com/acron0/getembed-analysis/master/resources/mockup-sensor_charts.png)
+
+### Raw Sensor Data
+
+![Raw Sensor Data Example](https://raw.githubusercontent.com/acron0/getembed-analysis/master/resources/mockup-raw_sensor_data.png)
+
+## Conclusion
+
+There are clearly a fair number of improvements that can be made to this site's UI. It's
+true to say that most of the changes are about enforcing convention and 'tidying' rather
+than discussing better ways for presenting data. With a deeper context, it's very likely
+that even more could be done to improve the functionality of the site, but this is a
+fair start.
