@@ -174,6 +174,9 @@ address the issues with this page.
   menu) or there should be a sticky icon which returns you to the property section (rather
   than the top of the page) so that you can return to the navigation tabs quickly.
 
+  7. Change the name of the "Main" link on the main menu navigation to something more
+  appropriate such as 'Property Search'
+
 ### Overview
 
   1. Although we assume the photo is not a critical piece of information (unlike a site
